@@ -4,14 +4,14 @@ import numpy
 def knn(trainData, testData, kInput):
     predictionCorrect = 0
     predictionWrong = 0
-
-    for d in testData:
-        classification = knnImplementation(trainData, d, kInput)
-
-        if (classification == (int)(d[0])):
+    i = 0
+    classification = map(lambda d: knnImplementation(trainData, d, kInput), testData)
+    for specificClassification in classification:
+        if testData[i][0] == (int)(specificClassification):
             predictionCorrect += 1
         else:
             predictionWrong += 1
+        i+=1
 
     accuracy = algorithmEfficiency(predictionCorrect, predictionWrong)
     return accuracy
