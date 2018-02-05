@@ -32,8 +32,8 @@ def knnImplementation(trainData, d, kInput):
     sortedDistanceArray = sorted(distanceArray)
 
     for i in range(0, kInput):
-        test = sortedDistanceArray[i][1]
-        numberOfOccurances[int(test)] += 1
+        classification = sortedDistanceArray[i][1]
+        numberOfOccurances[int(classification)] += 1
     # return the max number of occurances through 0-9 to determine which class it belongs to
     return numberOfOccurances.argmax()
 
