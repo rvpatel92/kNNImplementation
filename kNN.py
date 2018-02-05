@@ -24,8 +24,7 @@ def knnImplementation(trainData, d, kInput):
         distance = 0;
         # Calculate distance between the query-instance and all the training examples
         for i in range(1, len(tData)):
-            distance += pow((tData[i] - d[i]), 2)
-        distance = numpy.math.sqrt(distance)
+            distance += numpy.math.sqrt(pow((tData[i] - d[i]), 2))
         convertToList = [distance, tData[0]]
         distanceArray.append(convertToList)
 
@@ -34,7 +33,7 @@ def knnImplementation(trainData, d, kInput):
 
     for i in range(0, kInput):
         test = sortedDistanceArray[i][1]
-        numberOfOccurances[(int)(test)] += 1
+        numberOfOccurances[int(test)] += 1
     # return the max number of occurances through 0-9 to determine which class it belongs to
     return numberOfOccurances.argmax()
 
