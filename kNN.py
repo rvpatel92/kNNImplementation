@@ -52,4 +52,4 @@ print('Running algorithm...')
 accuracy = knn(trainData, testData, kInput)
 
 print('Accuracy of the algorithm is: ')
-print(accuracy)
+print'{percent:.2%}'.format(percent=accuracy)
