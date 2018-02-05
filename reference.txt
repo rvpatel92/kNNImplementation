@@ -1,0 +1,14 @@
+# how to access the csv files with some extra parameters
+- https://docs.scipy.org/doc/numpy-1.13.0/reference/generated/numpy.genfromtxt.html
+
+# follow some pseduocode in the lecture
+- http://ksuweb.kennesaw.edu/~mkang9/teaching/CS7267/05.KNN.pdf
+
+# using numpy for array creation
+- https://docs.scipy.org/doc/numpy-1.13.0/user/basics.creation.html
+
+# finding max of the array
+- https://docs.scipy.org/doc/numpy-1.13.0/reference/generated/numpy.argmax.html
+
+# sorting the array
+- https://www.tutorialspoint.com/python/list_sort.htm
