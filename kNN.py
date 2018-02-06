@@ -18,7 +18,7 @@ def knn(trainData, testData, kInput):
 
 def knnImplementation(trainData, d, kInput):
     distanceArray = []
-    numberOfOccurances = numpy.zeros(10)
+    numberOfOccurances = [0] * 10
 
     for tData in trainData:
         distance = 0;
@@ -35,7 +35,7 @@ def knnImplementation(trainData, d, kInput):
         classification = sortedDistanceArray[i][1]
         numberOfOccurances[int(classification)] += 1
     # return the max number of occurances through 0-9 to determine which class it belongs to
-    return numberOfOccurances.argmax()
+    return numberOfOccurances.index(max(numberOfOccurances))
 
 # Calculate algorithm accuracy
 def algorithmEfficiency(predictionCorrect, predictionWrong):
